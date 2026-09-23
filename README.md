@@ -26,13 +26,13 @@ Prefer a **tagged release** so consumers don’t float on `main`.
 **npm:**
 
 ```bash
-npm install github:jase-software/json-viewer#v0.1.0
+npm install github:jase-software/json-viewer#v0.1.1
 ```
 
 **Yarn:**
 
 ```bash
-yarn add github:jase-software/json-viewer#v0.1.0
+yarn add github:jase-software/json-viewer#v0.1.1
 ```
 
 Or in `package.json`:
@@ -40,14 +40,14 @@ Or in `package.json`:
 ```json
 {
   "dependencies": {
-    "@jase/json-viewer": "github:jase-software/json-viewer#v0.1.0"
+    "@jase/json-viewer": "github:jase-software/json-viewer#v0.1.1"
   }
 }
 ```
 
 Then run `npm install` / `yarn`.
 
-Until you cut `v0.1.0`, you can temporarily pin a branch or commit:
+To track unreleased `main` instead of a tag:
 
 ```json
 {
@@ -84,7 +84,7 @@ If you vendor the package (or develop it inside another repo):
 }
 ```
 
-Yarn workspaces: put this package under `packages/*` and depend on `"@jase/json-viewer": "0.1.0"`.
+Yarn workspaces: put this package under `packages/*` and depend on `"@jase/json-viewer": "0.1.1"`.
 
 ## Usage
 
@@ -162,11 +162,11 @@ json-viewer/
 2. Create an annotated tag when the API is worth pinning:
 
 ```bash
-git tag -a v0.1.0 -m "v0.1.0"
-git push origin v0.1.0
+git tag -a v0.1.1 -m "v0.1.1"
+git push origin v0.1.1
 ```
 
-3. Point dependencies at `#v0.1.0` (not `#main`) for stable installs.
+3. Point dependencies at `#v0.1.1` (not `#main`) for stable installs.
 
 ## License
 

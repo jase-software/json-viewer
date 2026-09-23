@@ -1,6 +1,6 @@
 {
   "name": "@jase/json-viewer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Quasar q-tree JSON viewer with Suite-style // comments and trailing commas",
   "type": "module",
   "private": true,
