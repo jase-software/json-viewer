@@ -63,7 +63,7 @@ defineOptions({
 const props = withDefaults(
   defineProps<{
     /** Object, array, primitive, or JSON string. */
-    modelValue?: unknown;
+    modelValue?: unknown | undefined;
     /**
      * Expand nodes shallower than this depth (root = 0).
      * Use `Infinity` (default) for fully expanded.
@@ -72,7 +72,6 @@ const props = withDefaults(
     dense?: boolean;
   }>(),
   {
-    modelValue: undefined,
     defaultExpandDepth: Number.POSITIVE_INFINITY,
     dense: true,
   },
