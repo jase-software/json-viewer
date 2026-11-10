@@ -122,6 +122,7 @@ Invalid JSON strings show an error message instead of the tree (`role="alert"`).
 | Prop | Type | Default | Notes |
 |------|------|---------|--------|
 | `modelValue` | `unknown` | — | Object, array, primitive, or JSON string (relaxed) |
+| `rootKey` | `string` | `'root'` | Label / id for the top-level tree node |
 | `defaultExpandDepth` | `number` | `Infinity` | Expand nodes with depth **&lt;** this value (root = `0`). Use `0` for fully collapsed, `1`/`2` for shallow |
 | `dense` | `boolean` | `true` | Passed through to `q-tree` |
 

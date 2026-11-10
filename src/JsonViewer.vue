@@ -64,6 +64,8 @@ const props = withDefaults(
   defineProps<{
     /** Object, array, primitive, or JSON string. */
     modelValue?: unknown | undefined;
+    /** Label / id for the top-level tree node. */
+    rootKey?: string;
     /**
      * Expand nodes shallower than this depth (root = 0).
      * Use `Infinity` (default) for fully expanded.
@@ -72,6 +74,7 @@ const props = withDefaults(
     dense?: boolean;
   }>(),
   {
+    rootKey: 'root',
     defaultExpandDepth: Number.POSITIVE_INFINITY,
     dense: true,
   },
@@ -93,7 +96,7 @@ const rootNode = computed<JsonTreeNode | null>(() => {
 
   }
 
-  return jsonToTreeNodes(parsed.value.value);
+  return jsonToTreeNodes(parsed.value.value, props.rootKey);
 
 });
 
